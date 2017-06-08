@@ -1,0 +1,15 @@
+# Site Information
+description: 
+keywords: keywords, test
+favicon: images/favicon.png
+
+# Site Menu
+# Neet slash(/) at the end
+menu:
+  home: /
+  archives: archives/
+
+# Site Verification
+verification:
+  baidu: 0a275bcf7d954b807e1db498d8e5b192
+  google: j5dWC85DkoAfUR50W00ewfii3X9ouH55HnyBP6oZxGE
