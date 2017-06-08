@@ -1,0 +1,24 @@
+<div class="site-brand">
+  <div class="container">
+    <h1 class="site-title">
+      <a class="site-title-link" href="<%- url_for('.') %>">
+        <%- config.title %>
+      </a>
+    </h1>
+  </div>
+</div>
+<nav class="site-nav">
+  <div class="container">
+    <ul class="site-nav-menu">
+      <% for (var name in theme.menu) { %>
+        <% var href = url_for(theme.menu[name]) %>
+        <% var current = url_for(path.replace('index.html', '')) %>
+        <li class="site-nav-item <% if (current == href) { %>active<% } %>">
+          <a class="site-nav-link" href="<%- href %>">
+            <%= __('menu.' + name) %>
+          </a>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+</nav>

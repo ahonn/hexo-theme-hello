@@ -1,0 +1,11 @@
+<%- partial('head/title') %>
+<%- partial('head/mate') %>
+
+<% if (theme.favicon) { %>
+  <%- favicon_tag(theme.favicon) %>
+<% } %>
+
+<%- open_graph() %>
+<%- css('css/style.css') %>
+<%- css('css/lib/font-awesome.min.css') %>
+

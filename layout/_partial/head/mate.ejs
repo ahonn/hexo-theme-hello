@@ -1,0 +1,28 @@
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<% if (page.description) { %>
+  <meta name="description" content="<%= page.description %>"/>
+<% } else if (theme.description) { %>
+  <meta name="description" content="<%= theme.description %>"/>
+<% } else if (config.description) { %>
+  <meta name="description" content="<%= config.description %>"/>
+<% } %>
+
+<% if (page.keywords) { %>
+  <meta name="keywords" content="<%= page.keywords %>" />
+<% } else if (theme.keywords) { %>
+  <meta name="keywords" content="<%= theme.keywords %>" />
+<% } else if (page.tags && page.tags.length) { %>
+  <meta name="keywords" content="<%- page.tags.join(",") %>" />
+<% } %>
+
+<meta name="theme-color" content="#f75357" />
+
+<% if (theme.verification.baidu) { %>
+  <meta name="baidu-site-verification" content="<%= theme.verification.baidu %>" />
+<% } %>
+<% if (theme.verification.google) { %>
+  <meta name="google-site-verification" content="<%= theme.verification.google %>" />
+<% } %>
