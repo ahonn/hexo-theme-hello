@@ -1,0 +1,62 @@
+.header {
+  .site-brand {
+    padding: 20px 0;
+  }
+
+  .site-title {
+    margin: 5px 0;
+    font-size: 36px;
+  }
+
+  .site-title-link {
+    font-family: "Libre Franklin", Georgia, serif;
+    letter-spacing: 1.5;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #f75357;
+    }
+
+    &::after {
+      content: ".";
+      color: #f75357;
+      font-size: 44px;
+    }
+  }
+
+  .site-nav {
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+
+    .site-nav-menu {
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-nav-item {
+      display: inline-block;
+      margin-right: 30px;
+    }
+
+    .site-nav-link {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 50px;
+
+      &:hover,
+      &.active {
+        color: #f75357;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .site-nav {
+      .site-nav-item {
+        margin-right: 15px;
+      }
+    }
+  }
+}
