@@ -13,8 +13,8 @@
       <% for (var name in theme.menu) { %>
         <% var href = url_for(theme.menu[name]) %>
         <% var current = url_for(path.replace('index.html', '')) %>
-        <li class="site-nav-item <% if (current == href) { %>active<% } %>">
-          <a class="site-nav-link" href="<%- href %>">
+        <li class="site-nav-item">
+          <a class="site-nav-link <% if (current == href) { %>active<% } %>" href="<%- href %>">
             <%= __('menu.' + name) %>
           </a>
         </li>
