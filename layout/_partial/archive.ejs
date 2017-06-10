@@ -1,11 +1,18 @@
 <% if (index) { %>
   <div class="container">
     <main class="main">
-      <setion class="article-list">
+      <section class="article-list">
         <% page.posts.each(function (post) { %>
           <%- partial('article', { post: post, index: true }) %>         
         <% }) %>
       </section>
+      <div class="paginator">
+        <%- paginator({
+          prev_text: "«",
+          next_text: "»",
+          show_all: true
+        }) %>
+      </div>
     </main>
   </div>
 <% } %>
