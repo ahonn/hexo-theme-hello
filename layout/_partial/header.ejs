@@ -1,24 +1,26 @@
-<div class="site-brand">
-  <div class="container">
-    <h1 class="site-title">
-      <a class="site-title-link" href="<%- url_for('.') %>">
-        <%- config.title %>
-      </a>
-    </h1>
+<header class="header">
+  <div class="site-brand">
+    <div class="container">
+      <h1 class="site-title">
+        <a class="site-title-link" href="<%- url_for('.') %>">
+          <%- config.title %>
+        </a>
+      </h1>
+    </div>
   </div>
-</div>
-<nav class="site-nav">
-  <div class="container">
-    <ul class="site-nav-menu">
-      <% for (var name in theme.menu) { %>
-        <% var href = url_for(theme.menu[name]) %>
-        <% var current = url_for(path.replace('index.html', '')) %>
-        <li class="site-nav-item">
-          <a class="site-nav-link <% if (current == href) { %>active<% } %>" href="<%- href %>">
-            <%= __('menu.' + name) %>
-          </a>
-        </li>
-      <% } %>
-    </ul>
-  </div>
-</nav>
+  <nav class="site-nav">
+    <div class="container">
+      <ul class="site-nav-menu">
+        <% for (var name in theme.menu) { %>
+          <% var href = url_for(theme.menu[name]) %>
+          <% var current = url_for(path.replace('index.html', '')) %>
+          <li class="site-nav-item">
+            <a class="site-nav-link <% if (current == href) { %>active<% } %>" href="<%- href %>">
+              <%= __('menu.' + name) %>
+            </a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>
+</header>

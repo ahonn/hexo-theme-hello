@@ -41,15 +41,31 @@ a {
        url('../fonts/LibreFranklin/LibreFranklin-Bold.woff2') format('woff2');
 }
 
+.clearfix {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
 .container {
 	max-width: 1170px;
 	margin: 0 auto;
 	padding: 0 20px;
   position: relative;
+
+  @extend .clearfix
 }
 
 .main {
   width: calc(100% - 320px);
   display: inline-block;
   position: relative;
+}
+
+.sidebar {
+  float: right;
+  width: 280px;
+  padding: 20px 0;
 }

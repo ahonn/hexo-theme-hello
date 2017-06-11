@@ -1,0 +1,11 @@
+<footer class="footer">
+  <div class="container">
+    <p class="copyright">
+      <% var current = date(Date.now(), "YYYY") %>
+      Copyright &copy; <% if (theme.since) { %><%= theme.since %> - <% } %><%= current %>. All Rights Reserved.
+    </p>
+    <p class="power-by">
+      Power by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-hello">Hello</a>.
+    </p>
+  </div>
+</footer>
