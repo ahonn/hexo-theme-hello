@@ -33,3 +33,27 @@
     }
   }
 }
+
+.tagcloud {
+  .tagcloud-wrapper {
+    margin: 0 15px;
+    padding: 10px 0;
+
+    a {
+      display: inline-block;
+      line-height: 1.6;
+      margin-right: 5px;
+      word-wrap: break-word;
+      transition-duration: 0.2s;
+      transition-property: transform;
+      transition-timing-function: ease-out;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: #f75357;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
