@@ -1,0 +1,13 @@
+<div class="article-meta">
+  <div class="article-date">
+    <%= full_date(post.date, 'll') %>
+  </div>
+  <div class="article-categories">
+    <i class="fa fa-caret-right"></i>
+    <% post.categories.each(function (category) { %>
+      <a class="article-category" href="<%- url_for(category.path) %>">
+        <%= category.name %>
+      </a>
+    <% }) %>
+  </div>
+</div>

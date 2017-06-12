@@ -1,27 +1,7 @@
 <article class="article">
   <header class="article-header">
-    <div class="article-meta">
-      <div class="article-date">
-        <%= full_date(post.date, 'll') %>
-      </div>
-      <div class="article-categories">
-        <i class="fa fa-caret-right"></i>
-        <% post.categories.each(function (category) { %>
-          <a class="article-category" href="<%- url_for(category.path) %>">
-            <%= category.name %>
-          </a>
-        <% }) %>
-      </div>
-    </div>
-    <h2 class="article-title">
-      <% if (index) { %>
-        <a class="article-link" href="<%- url_for(post.path) %>">
-          <%= post.title %>
-        </a>
-      <% } else { %>
-        <%= post.title %>
-      <% }%>
-    </h2>
+    <%- partial('_article/meta') %>
+    <%- partial('_article/title') %>
   </header>
   <div class="article-body markdown">
     <% if (index) { %>
@@ -37,13 +17,7 @@
   </div>
   <% if (!index) { %>
     <footer class="article-footer">
-      <div class="article-tags">
-        <% post.tags.each(function (tag) { %>
-          <a class="article-tag" href="<%- url_for(tag.path) %>">
-            <%= tag.name %>
-          </a>
-        <% }) %>
-      </div>
+      <%- partial('_article/tags') %>
     </footer>
   <% } %>
 </article>

@@ -9,11 +9,19 @@ menu:
   home: /
   archives: archives/
 
+# Site Sidebar Widget
 widgets:
   - recent_post
   - tagcloud
   - categories
   # - archives
+  - links
+
+# Site Friend Links
+links:
+  yzzting: http://www.yzz1995.cn/
+  co1mugx: http://blog.co1mugx.tk/
+  leyar: https://www.ileyar.com/
 
 # Site Verification
 verification:

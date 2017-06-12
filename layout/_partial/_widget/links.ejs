@@ -1,0 +1,14 @@
+<div class="widget links">
+  <h3 class="widget-title">
+    <%- __('widget.links') %>
+  </h3>
+  <ul class="link-list">
+    <% for (var name in theme.links) { %>
+      <li class="link-list-item">
+        <a class="link-list-link" href="<%= theme.links[name] %>">
+          <%= name %>
+        </a>
+      </li>
+    <% } %>
+  </ul>
+</div>
