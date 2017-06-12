@@ -9,6 +9,11 @@ menu:
   home: /
   archives: archives/
 
+widgets:
+  - recent_post
+  - tagcloud
+  - categories
+
 # Site Verification
 verification:
   baidu: 0a275bcf7d954b807e1db498d8e5b192

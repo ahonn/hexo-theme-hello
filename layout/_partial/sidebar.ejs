@@ -1,4 +1,5 @@
 <aside class="sidebar">
-  <%- partial('_widget/recent_post') %>
-  <%- partial('_widget/tagcloud') %>
+  <% theme.widgets.forEach(function(widget){ %>
+    <%- partial('_widget/' + widget) %>
+  <% }) %>
 </aside>

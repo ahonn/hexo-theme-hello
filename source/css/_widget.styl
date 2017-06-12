@@ -5,6 +5,7 @@
  .widget-title {
    padding: 5px 0;
    margin: 0 15px;
+   width: 33%;
    font-size: 16px;
    font-weight: 600;
    font-family: PingFang SC, Microsoft YaHei, STHeiti, sans-serif;
@@ -22,12 +23,12 @@
     font-size: 15px;
   }
 
-  .post-item {
+  .recent-post-item {
     display: block;
     line-height: 1.6;
   }
 
-  .post-link {
+  .recent-post-link {
     &:hover {
       color: #f75357;
     }
@@ -55,5 +56,33 @@
         transform: scale(1.1);
       }
     }
+  }
+}
+
+.categories {
+  .category-list {
+    margin: 0 15px;
+    padding: 10px 0;
+    list-style: none;
+  }
+
+  .category-list-item {
+    display: block;
+    line-height: 1.6;
+    position: relative;
+  }
+
+  .category-list-link {
+    &:hover {
+      color: #f75357;
+    }
+  }
+
+  .category-list-count {
+    font-size: .8em;
+    color: #f75357;
+    position: absolute;
+    top: -3px;
+    margin-left: 2px;
   }
 }

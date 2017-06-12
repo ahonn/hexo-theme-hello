@@ -1,0 +1,10 @@
+<% if (site.tags.length){ %>
+  <div class="widget tagcloud">
+    <h3 class="widget-title">
+      <%- __('widget.tagcloud') %>
+    </h3>
+    <div class="tagcloud-wrapper">
+      <%- tagcloud({min_font: 16, max_font: 22, amount: 100, orderby: 'count'}) %>
+    </div>
+  </div>
+<% } %>
