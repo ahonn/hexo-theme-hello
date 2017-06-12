@@ -13,6 +13,7 @@ widgets:
   - recent_post
   - tagcloud
   - categories
+  # - archives
 
 # Site Verification
 verification:
