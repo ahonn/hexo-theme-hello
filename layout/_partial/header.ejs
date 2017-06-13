@@ -16,7 +16,12 @@
           <% var current = url_for(path.replace('index.html', '')) %>
           <li class="site-nav-item">
             <a class="site-nav-link <% if (current == href) { %>active<% } %>" href="<%- href %>">
-              <%= __('menu.' + name) %>
+              <% var itemName = __('menu.' + name) %>
+              <% if (itemName.startsWith('menu')) { %>
+                <%= name %>
+              <% } else { %>
+                <%= __('menu.' + name) %>
+              <% } %>
             </a>
           </li>
         <% } %>

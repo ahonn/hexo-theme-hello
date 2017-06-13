@@ -1,11 +1,45 @@
-<% if (index) { %>
-  <div class="container">
-    <main class="main">
+<div class="container">
+  <main class="main">
+    <% if (index) { %>
       <section class="article-list">
         <% page.posts.each(function (post) { %>
           <%- partial('article', { post: post, index: true }) %>         
         <% }) %>
       </section>
+    <% } else { %>
+      <div class="archive">
+        <% if (page.tag) { %>
+          <h2 class="archive-title">
+            <i class="fa fa-tag"></i>
+            <%= page.tag %>
+          </h2>
+        <% } %>
+        <% var last %> 
+        <% page.posts.each(function (post) { %>
+          <% var year = post.date.year() %>
+          <% if (last != year){ %>
+            <% if (last != null){ %>
+              </ul></section>
+            <% } %>
+            <% last = year; %>
+            <section class="archive-section">
+              <div class="archive-year">
+                <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+              </div>
+              <ul class="archive-list">
+          <% } %>
+          <li class="archive-item">
+            <span class="article-date">
+              <%= full_date(post.date, 'MM/DD') %>
+            </span>
+            <a class="article-link" href="<%= url_for(post.path)%>">
+              <%= post.title %>
+            </a>
+          </li>
+        <% }) %>
+      </div>
+    <% } %>
+    <% if (page.total > 1) { %>
       <div class="paginator">
         <%- paginator({
           prev_text: "«",
@@ -13,7 +47,7 @@
           show_all: true
         }) %>
       </div>
-    </main>
-    <%- partial('sidebar') %>
-  </div>
-<% } %>
+    <% } %>
+  </main>
+  <%- partial('sidebar') %>
+</div>
