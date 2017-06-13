@@ -77,5 +77,57 @@
         color: #f75357;
       }
     }
+
+    .article-pagination {
+      margin-top: 20px;
+
+      @extend .clearfix;
+
+      .next-article {
+        float: left;
+        text-align: left;
+      }
+
+      .prev-article {
+        float: right;
+        text-align: right;
+      }
+
+      .hint {
+        display: block;
+        color: #999;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .title {
+        color: #f75357;
+        font-size: 18px;
+
+        &:hover {
+          color: darken(#f75357, 15%);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .article {
+    .article-footer {
+      .article-pagination {
+        .hint {
+          font-size: 18px;
+          font-weight: 400;
+          text-transform: capitalize;
+          color: #f75357;
+        }
+
+        .title {
+          display: none;
+        }
+      }
+    }
   }
 }

@@ -4,6 +4,10 @@ menu:
 
 readmore: 阅读更多
 
+article:
+  next: 旧文章
+  prev: 新文章
+
 widget:
   recent_post: 最新文章
   tagcloud: 标签云
