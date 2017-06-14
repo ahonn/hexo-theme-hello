@@ -7,8 +7,9 @@ favicon: images/favicon.png
 # Neet slash(/) at the end
 menu:
   home: /
-  技术: categories/技术文章/ 
-  思考: categories/思考总结/
+  # 技术: categories/technology/ 
+  思考: categories/thinking/
+  生活: categories/life/
   archives: archives/
 
 # Site Sidebar Widget
@@ -25,7 +26,14 @@ links:
   co1mugx: http://blog.co1mugx.tk/
   leyar: https://www.ileyar.com/
 
+analytics:
+  google: UA-74273646-1
+  baidu: 0a275bcf7d954b807e1db498d8e5b192
+
 # Site Verification
 verification:
   baidu: 0a275bcf7d954b807e1db498d8e5b192
   google: j5dWC85DkoAfUR50W00ewfii3X9ouH55HnyBP6oZxGE
+
+comment:
+  disqus: ahonn
