@@ -11,6 +11,7 @@ menu:
   思考: categories/thinking/
   生活: categories/life/
   archives: archives/
+  about: about/
 
 # Site Sidebar Widget
 widgets:
