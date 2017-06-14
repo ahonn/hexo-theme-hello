@@ -1,7 +1,8 @@
 # Site Information
-description: 
-keywords: keywords, test
-favicon: images/favicon.png
+description: "记录成长，分享生活与技术的点滴"
+keywords: "江岳勋, 江岳勋的博客, Ahonn, Ahonn's Blog, 前端，博客"
+favicon: images/favicon.ico
+rss: /atom.xml
 
 # Site Menu
 # Neet slash(/) at the end
