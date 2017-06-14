@@ -1,4 +1,15 @@
 <%
   var title = page.title
+
+  if (is_archive()){
+    title = __('menu.archives')
+    if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()) {
+    title =  page.category;
+  } else if (is_tag()) {
+    title = page.tag;
+  }
 %>
 <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
