@@ -4,8 +4,9 @@
     <%- partial('_article/title') %>
   </header>
   <div class="article-body markdown">
+    <% var excerpt = post.excerpt || post.content %>
     <% if (index) { %>
-      <%- post.excerpt %>
+      <%- excerpt %>
       <div class="readmore">
         <a href="<%- url_for(post.path) %>" class="readmore-link">
           <%- __('readmore') %>
