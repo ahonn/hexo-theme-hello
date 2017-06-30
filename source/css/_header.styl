@@ -52,11 +52,14 @@
 
     .site-nav-icon {
       float: right;
+      width: 280px;
       line-height: 50px;
-      font-size: 22px;
+      font-size: 24px;
 
       .site-icon-link {
+        display: inline-block;
         color: #666;
+        margin-left: 10px;
 
         &:hover {
           color: #f75357;
@@ -72,7 +75,13 @@
       .site-nav-item {
         margin-right: 15px;
       }
+    }
+  }
+}
 
+@media (max-width: 970px) {
+  .header {
+    .site-nav {
       .site-nav-icon {
         display: none;
       }
